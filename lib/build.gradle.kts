@@ -1,11 +1,5 @@
 plugins {
-    java
-    jacoco
-    application
-}
-
-java.toolchain {
-    languageVersion.set(JavaLanguageVersion.of(21))
+    id("hu.bme.mit.ase.shingler.gradle.application")
 }
 
 repositories {

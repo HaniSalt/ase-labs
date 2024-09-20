@@ -1,13 +1,6 @@
 plugins {
-    java
-    jacoco
-    application
+    id("hu.bme.mit.ase.shingler.gradle.application")
 }
-
-java.toolchain {
-    languageVersion.set(JavaLanguageVersion.of(21))
-}
-
 repositories {
     mavenCentral()
 }
@@ -29,18 +22,6 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
 
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
-}
-
-tasks {
-    test {
-        useJUnitPlatform()
-        testLogging.showStandardStreams = true
-        finalizedBy(jacocoTestReport)
-    }
-
-    jacocoTestReport {
-        inputs.files(test.get().outputs)
-    }
 }
 
 application {
