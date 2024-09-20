@@ -18,7 +18,6 @@ val log4jVersion = "2.23.1"
 val junitVersion = "5.10.0"
 
 dependencies {
-    implementation(project(":logic"))
     implementation("org.slf4j:slf4j-api:$slf4jVersion")
     implementation("info.picocli:picocli:$picoCliVersion")
 
