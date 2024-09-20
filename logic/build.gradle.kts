@@ -40,7 +40,3 @@ tasks {
         inputs.files(test.get().outputs)
     }
 }
-
-application {
-    mainClass = "hu.bme.mit.ase.shingler.similarity.SimilarityApp"
-}
